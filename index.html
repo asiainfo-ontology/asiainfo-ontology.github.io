@@ -12,356 +12,428 @@
     </style>
 </head>
 <body>
-    <div id="app" class="container">
-        <div class="header">
-            <div class="content">
+    <div
+        id="app">
+        <div
+            @scroll="handleScroll">
+            <div
+                :class="{
+                    container: true,
+                    scroll: scrollPosition > 0
+                }">
                 <div
-                    class="pos-left">
-                    <img src="./imgs/asiainfo-logo.png"/>
-                </div>
-                <div
-                    class="pos-right">
-                    <el-dropdown>
-                        <span class="el-dropdown-link">
-                            GitHub
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="14"
-                                height="14"
-                                viewBox="0 0 14 14"
-                                fill="none">
-                                <path
-                                    d="M4 6L7 9L10 6"
-                                    stroke="currentColor"
-                                    stroke-linecap="round"
-                                    stroke-linejoin="round"/>
-                            </svg>
-                        </span>
-                        <template #dropdown>
-                            <el-dropdown-menu>
-                                <el-dropdown-item>ODLM</el-dropdown-item>
-                                <el-dropdown-item>AN Ontology</el-dropdown-item>
-                            </el-dropdown-menu>
-                        </template>
-                    </el-dropdown>
-                    <el-link href="" target="_blank">联系我们</el-link>
-                </div>
-            </div>
-        </div>
-        <div class="banner">
-            <div class="content">
-                <div
-                    class="pos-left">
-                    <div class="title">
-                        亚信科技数智本体
-                    </div>
-                    <div class="descr">
-                        在AI重塑产业格局的时代，数智本体作为企业认知的“操作系统”，为大模型赋予结构化世界观。它将业务对象、规则与能力深度融合，打通语义理解、逻辑推理与系统执行的闭环，让AI从“泛化生成”跃迁至“精准决策”。通过本体驱动，大模型不再浮于表层问答，而是深度融入业务脉络，实现可解释、可追溯、可控制的智能自治，成为企业战略落地的数字引擎。
-                    </div>
-                    <div class="btn-group">
-                        <el-button class="active" round>数据管治本体</el-button>
-                        <el-button round>自智网络本体</el-button>
-                    </div>
-                </div>
-                <div
-                    class="pos-right">
-                    <img src="./imgs/banner-bg.png"/>
-                </div>
-            </div>
-        </div>
-        <div class="resource">
-            <img src="./imgs/resource-bg-circle.png"/>
-            <div class="content">
-                <div
-                    class="card">
-                    <img src="./imgs/resource-icon-1.png"/>
-                    <div
-                        class="card-content">
-                        <div class="card-label">
-                            数据管治本体
-                        </div>
-                        <div class="card-name">
-                            Ontology for Data Lake Management
-                        </div>
-                        <div class="card-descr">
-                            数据管治本体（Ontology for Data Lake Management，ODLM）是基于本体论构建的标准化语义模型，为数据湖提供端到端的数据治理框架。它系统化定义数据源、数据集、加工任务、指标、血缘关系与权限策略等核心要素，构建可机读、可推理的数据本体地图。ODLM不仅实现元数据的统一管理，更使AI能深度理解数据资产的上下文与关联。通过融合底层加工血缘与业务语义关系，可自动发现对象间的隐性关联，揭示跨域数据逻辑，支撑智能数据检索、影响分析与合规管控，释放数据湖的深层价值。
-                        </div>
-                        <div class="card-btn">
-                            <el-button class="home-btn" round>下载OWL</el-button>
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="card">
-                    <img src="./imgs/resource-icon-2.png"/>
-                    <div
-                        class="card-content">
-                        <div class="card-label">
-                            网络本体
-                        </div>
-                        <div class="card-name">
-                            AN Ontology
-                        </div>
-                        <div class="card-descr">
-                            自智网络本体（Autonomy Network Ontology，AN Ontology）是面向自智网络的统一语义框架，系统化定义网元、链路、服务、告警、工单、SLA等核心实体及其动态关系，构建可机读、可推理的网络知识基座。它使AI深入理解网络拓扑、业务依赖与运维逻辑，消除大模型在复杂场景中的语义幻觉，实现精准根因分析、影响评估与处置决策。支持自动故障检测、智能修复、闭环工单与资源自优，推动网络从“人工干预”向“高阶自治”持续演进，为通信网络的智能
-                            化运维提供坚实认知底座。
-                        </div>
-                        <div class="card-btn">
-                            <el-button class="home-btn" round>下载OWL</el-button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="community">
-            <div class="content">
-                <div
-                    class="community-label">
-                    社区驱动
-                </div>
-                <div
-                    class="community-descr">
-                    由社区维护与构建
-                </div>
-                <div
-                    class="card">
-                    <div
-                        class="card-info pos-left">
+                    class="header">
+                    <div class="content">
                         <div
-                            class="card-label">
-                            公开公平的协作原则
+                            class="pos-left">
+                            <img src="./imgs/asiainfo-logo.png"/>
                         </div>
                         <div
-                            class="card-descr">
-                            亚信科技数智本体项目致力于构建一个安全、开放且透明的协作环境，确保所有参与者都能平等地贡献和受益。通过标准化接口与模块化设计，我们支持与其他第三方平台工具及业务场景进行快速集成，提供本体数据、逻辑推理与行动执行服务。无论您是开发者、企业用户还是研究机构，都可以轻松接入并利用我们的资源，共同推动智能系统的创新发展。我们坚信，只有在一个公开透明的环境中，才能最大化地激发集体智慧，实现多方共赢。
+                            class="pos-right">
+                            <el-dropdown
+                                @command="handleGithubCommand">
+                                <span class="el-dropdown-link">
+                                    GitHub
+                                    <svg
+                                        xmlns="http://www.w3.org/2000/svg"
+                                        width="14"
+                                        height="14"
+                                        viewBox="0 0 14 14"
+                                        fill="none">
+                                        <path
+                                            d="M4 6L7 9L10 6"
+                                            stroke="currentColor"
+                                            stroke-linecap="round"
+                                            stroke-linejoin="round"/>
+                                    </svg>
+                                </span>
+                                <template #dropdown>
+                                    <el-dropdown-menu>
+                                        <el-dropdown-item command="odlm">ODLM</el-dropdown-item>
+                                        <el-dropdown-item command="ontology">AN Ontology</el-dropdown-item>
+                                    </el-dropdown-menu>
+                                </template>
+                            </el-dropdown>
+                            <div class="el-link" @click="scrollToTarget('contact')">联系我们</div>
                         </div>
                     </div>
-                    <div
-                        class="card-img pos-right">
-                        <img src="./imgs/community-placeholder.png"/>
-                    </div>
                 </div>
-                <div
-                    class="card">
-                    <div
-                        class="card-img pos-left">
-                        <img src="./imgs/community-placeholder.png"/>
-                    </div>
-                    <div
-                        class="card-info pos-right">
+                <div class="banner">
+                    <div class="content">
                         <div
-                            class="card-label">
-                            活跃的社区与多样化团队
-                        </div>
-                        <div
-                            class="card-descr">
-                            我们的社区汇聚了来自不同企业、院校及研究机构的专业人士，形成了一个多元化且充满活力的合作网络。社区成员在问题跟踪、功能优化和技术讨论中表现活跃且响应迅速，积极分享各自的经验与见解。无论是对本体论内容的细化完善，还是对技术基础设施的持续改进，每个参与者都在为提升系统性能贡献力量。这种跨领域、多层次的合作模式不仅加速了技术创新，还促进了知识的广泛传播，使得每一个新版本都凝聚了众多专家的心血结晶。
-                        </div>
-                    </div>
-                </div>
-                <div
-                    class="card">
-                    <div
-                        class="card-info pos-left">
-                        <div
-                            class="card-label">
-                            标准格式与持久化访问
-                        </div>
-                        <div
-                            class="card-descr">
-                            为了确保广泛的兼容性和易用性，亚信科技数智本体均采用OWL（RDF/XML格式）标准发布，可通过GitHub便捷获取。每个下载文件均附带可解析的版本IRI，确保持久化引用与访问，便于用户追踪版本更新及历史变更。这一标准化格式不仅简化了数据交换过程，还提升了系统的互操作性，方便各类应用无缝集成。此外，我们提供了详细的文档和支持资源，帮助用户快速上手并充分利用本体的各项功能，助力企业在智能化转型道路上迈出坚实步伐。
-                        </div>
-                    </div>
-                    <div
-                        class="card-img pos-right">
-                        <img src="./imgs/community-placeholder.png"/>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="partner">
-            <div class="content">
-                <div
-                    class="partner-label">
-                    合作伙伴用户
-                </div>
-                <div
-                    class="partner-descr">
-                    社区生态合作伙伴用户
-                </div>
-                <div
-                    class="card-list">
-                    <div
-                        class="card">
-                        <img style="height: 60px;" src="./imgs/partner-1.png"/>
-                    </div>
-                    <div
-                        class="card">
-                        <img src="./imgs/partner-2.png"/>
-                    </div>
-                    <div
-                        class="card">
-                        <img src="./imgs/partner-3.png"/>
-                    </div>
-                    <div
-                        class="card">
-                    </div>
-                    <div
-                        class="card">
-                    </div>
-                    <div
-                        class="card">
-                    </div>
-                    <div
-                        class="card">
-                    </div>
-                    <div
-                        class="card">
-                    </div>
-                    <div
-                        class="card">
-                    </div>
-                    <div
-                        class="card">
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="customer-testimonials">
-            <img src="./imgs/customer-testimonials-bg.png"/>
-            <div class="content">
-                <div
-                    class="customer-testimonials-label">
-                    客户赠言
-                </div>
-                <div
-                    class="card-list">
-                    <div
-                        class="card">
-                        <div
-                            class="card-icon">
-                        </div>
-                        <div
-                            class="card-content">
-                            <div class="card-label">
-                                赠言1
+                            class="pos-left">
+                            <div class="title">
+                                亚信科技数智本体
                             </div>
-                            <div class="card-descr">
-                                赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言
+                            <div class="descr">
+                                在AI重塑产业格局的时代，数智本体作为企业认知的“操作系统”，为大模型赋予结构化世界观。它将业务对象、规则与能力深度融合，打通语义理解、逻辑推理与系统执行的闭环，让AI从“泛化生成”跃迁至“精准决策”。通过本体驱动，大模型不再浮于表层问答，而是深度融入业务脉络，实现可解释、可追溯、可控制的智能自治，成为企业战略落地的数字引擎。
+                            </div>
+                            <div class="btn-group">
+                                <el-button
+                                    round
+                                    class="home-btn"
+                                    @click="goToSection('resource')">
+                                    数据管治本体
+                                </el-button>
+                                <el-button
+                                    round
+                                    class="home-btn"
+                                    @click="goToSection('resource')">
+                                    自智网络本体
+                                </el-button>
                             </div>
                         </div>
-                    </div>
-                    <div
-                        class="card">
                         <div
-                            class="card-icon">
-                        </div>
-                        <div
-                            class="card-content">
-                            <div class="card-label">
-                                赠言1
-                            </div>
-                            <div class="card-descr">
-                                赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言
-                            </div>
+                            class="pos-right">
+                            <img src="./imgs/banner-bg.png"/>
                         </div>
                     </div>
-                    <div
-                        class="card">
+                </div>
+                <div id="resource" class="resource">
+                    <img src="./imgs/resource-bg-circle.png"/>
+                    <div class="content">
                         <div
-                            class="card-icon">
+                            class="card">
+                            <img src="./imgs/resource-icon-1.png"/>
+                            <div
+                                class="card-content">
+                                <div class="card-label">
+                                    数据管治本体
+                                </div>
+                                <div class="card-name">
+                                    Ontology for Data Lake Management
+                                </div>
+                                <div class="card-descr">
+                                    数据管治本体（Ontology for Data Lake Management，ODLM）是基于本体论构建的标准化语义模型，为数据湖提供端到端的数据治理框架。它系统化定义数据源、数据集、加工任务、指标、血缘关系与权限策略等核心要素，构建可机读、可推理的数据本体地图。ODLM不仅实现元数据的统一管理，更使AI能深度理解数据资产的上下文与关联。通过融合底层加工血缘与业务语义关系，可自动发现对象间的隐性关联，揭示跨域数据逻辑，支撑智能数据检索、影响分析与合规管控，释放数据湖的深层价值。
+                                </div>
+                                <div class="card-btn">
+                                    <el-button class="home-btn" round>下载OWL</el-button>
+                                </div>
+                            </div>
                         </div>
                         <div
-                            class="card-content">
-                            <div class="card-label">
-                                赠言1
-                            </div>
-                            <div class="card-descr">
-                                赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言
+                            class="card">
+                            <img src="./imgs/resource-icon-2.png"/>
+                            <div
+                                class="card-content">
+                                <div class="card-label">
+                                    自智网络本体
+                                </div>
+                                <div class="card-name">
+                                    AN Ontology
+                                </div>
+                                <div class="card-descr">
+                                    自智网络本体（Autonomy Network Ontology，AN Ontology）是面向自智网络的统一语义框架，系统化定义网元、链路、服务、告警、工单、SLA等核心实体及其动态关系，构建可机读、可推理的网络知识基座。它使AI深入理解网络拓扑、业务依赖与运维逻辑，消除大模型在复杂场景中的语义幻觉，实现精准根因分析、影响评估与处置决策。支持自动故障检测、智能修复、闭环工单与资源自优，推动网络从“人工干预”向“高阶自治”持续演进，为通信网络的智能
+                                    化运维提供坚实认知底座。
+                                </div>
+                                <div class="card-btn">
+                                    <el-button class="home-btn" round>下载OWL</el-button>
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="contact-us">
-            <img src="./imgs/contact-us-bg.png"/>
-            <div class="content">
-                <div
-                    class="contact-us-label">
-                    联系我们
-                </div>
-                <div
-                    class="contact-us-descr">
-                    我们很乐意收到您的来信
-                </div>
-                <div
-                    class="card-list">
-                    <div
-                        class="card">
+                <div class="community">
+                    <div class="content">
                         <div
-                            class="card-icon">
-                            <img src="./imgs/contact-us-icon-1.png"/>
+                            class="community-label">
+                            社区驱动
                         </div>
                         <div
-                            class="card-label">
-                            数智本体 GitHub Tracker
+                            class="community-descr">
+                            由社区维护与构建
                         </div>
                         <div
-                            class="card-descr">
-                            数智本体的首选联系渠道是GitHub Issue Tracker
+                            class="card">
+                            <div
+                                class="card-info pos-left">
+                                <div
+                                    class="card-label">
+                                    公开公平的协作原则
+                                </div>
+                                <div
+                                    class="card-descr">
+                                    亚信科技数智本体项目致力于构建一个安全、开放且透明的协作环境，确保所有参与者都能平等地贡献和受益。通过标准化接口与模块化设计，我们支持与其他第三方平台工具及业务场景进行快速集成，提供本体数据、逻辑推理与行动执行服务。无论您是开发者、企业用户还是研究机构，都可以轻松接入并利用我们的资源，共同推动智能系统的创新发展。我们坚信，只有在一个公开透明的环境中，才能最大化地激发集体智慧，实现多方共赢。
+                                </div>
+                            </div>
+                            <div
+                                class="card-img pos-right">
+                                <img src="./imgs/community-1.png"/>
+                            </div>
                         </div>
                         <div
-                            class="card-btn">
-                            <el-button class="home-btn" round>Open New Issue</el-button>
+                            class="card">
+                            <div
+                                class="card-img pos-left">
+                                <img src="./imgs/community-2.png"/>
+                            </div>
+                            <div
+                                class="card-info pos-right">
+                                <div
+                                    class="card-label">
+                                    活跃的社区与多样化团队
+                                </div>
+                                <div
+                                    class="card-descr">
+                                    我们的社区汇聚了来自不同企业、院校及研究机构的专业人士，形成了一个多元化且充满活力的合作网络。社区成员在问题跟踪、功能优化和技术讨论中表现活跃且响应迅速，积极分享各自的经验与见解。无论是对本体论内容的细化完善，还是对技术基础设施的持续改进，每个参与者都在为提升系统性能贡献力量。这种跨领域、多层次的合作模式不仅加速了技术创新，还促进了知识的广泛传播，使得每一个新版本都凝聚了众多专家的心血结晶。
+                                </div>
+                            </div>
+                        </div>
+                        <div
+                            class="card">
+                            <div
+                                class="card-info pos-left">
+                                <div
+                                    class="card-label">
+                                    标准格式与持久化访问
+                                </div>
+                                <div
+                                    class="card-descr">
+                                    为了确保广泛的兼容性和易用性，亚信科技数智本体均采用OWL（RDF/XML格式）标准发布，可通过GitHub便捷获取。每个下载文件均附带可解析的版本IRI，确保持久化引用与访问，便于用户追踪版本更新及历史变更。这一标准化格式不仅简化了数据交换过程，还提升了系统的互操作性，方便各类应用无缝集成。此外，我们提供了详细的文档和支持资源，帮助用户快速上手并充分利用本体的各项功能，助力企业在智能化转型道路上迈出坚实步伐。
+                                </div>
+                            </div>
+                            <div
+                                class="card-img pos-right">
+                                <img src="./imgs/community-3.png"/>
+                            </div>
                         </div>
                     </div>
-                    <div
-                        class="card">
+                </div>
+                <div class="partner">
+                    <div class="content">
                         <div
-                            class="card-icon">
-                            <img src="./imgs/contact-us-icon-2.png"/>
+                            class="partner-label">
+                            合作伙伴用户
                         </div>
                         <div
-                            class="card-label">
-                            网络本体 GitHub Tracker
+                            class="partner-descr">
+                            社区生态合作伙伴用户
                         </div>
                         <div
-                            class="card-descr">
-                            数智本体的首选联系渠道是GitHub Issue Tracker
-                        </div>
-                        <div
-                            class="card-btn">
-                            <el-button class="home-btn" round>Open New Issue</el-button>
+                            class="card-list">
+                            <div
+                                class="card">
+                                <img style="height: 60px;" src="./imgs/partner-1.png"/>
+                            </div>
+                            <div
+                                class="card">
+                                <img src="./imgs/partner-2.png"/>
+                            </div>
+                            <div
+                                class="card">
+                                <img src="./imgs/partner-3.png"/>
+                            </div>
+                            <div
+                                class="card">
+                            </div>
+                            <div
+                                class="card">
+                            </div>
+                            <div
+                                class="card">
+                            </div>
+                            <div
+                                class="card">
+                            </div>
+                            <div
+                                class="card">
+                            </div>
+                            <div
+                                class="card">
+                            </div>
+                            <div
+                                class="card">
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-        <div class="footer">
-            <div class="content">
-                <div
-                    class="link">
-                    <div class="pos-left">
-                        <img src="./imgs/asiainfo-logo-white.png"/>
-                    </div>
-                    <div class="pos-right">
-                        <el-link type="info" href="https://element-plus.org" target="_blank">GitHub</el-link>
-                        <el-link type="info" href="https://element-plus.org" target="_blank">联系我们</el-link>
+                <div class="customer-testimonials">
+                    <img src="./imgs/customer-testimonials-bg.png"/>
+                    <div class="content">
+                        <div
+                            class="customer-testimonials-label">
+                            客户赠言
+                        </div>
+                        <div
+                            class="card-list">
+                            <div
+                                class="card">
+                                <div
+                                    class="card-icon">
+                                </div>
+                                <div
+                                    class="card-content">
+                                    <div class="card-label">
+                                        赠言1
+                                    </div>
+                                    <div class="card-descr">
+                                        赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="card">
+                                <div
+                                    class="card-icon">
+                                </div>
+                                <div
+                                    class="card-content">
+                                    <div class="card-label">
+                                        赠言1
+                                    </div>
+                                    <div class="card-descr">
+                                        赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="card">
+                                <div
+                                    class="card-icon">
+                                </div>
+                                <div
+                                    class="card-content">
+                                    <div class="card-label">
+                                        赠言1
+                                    </div>
+                                    <div class="card-descr">
+                                        赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <p>&copy; 2025 亚信科技.备 xxxxxxxxxx号</p>
+                <div id="contact" class="contact-us">
+                    <img src="./imgs/contact-us-bg.png"/>
+                    <div class="content">
+                        <div
+                            class="contact-us-label">
+                            联系我们
+                        </div>
+                        <div
+                            class="contact-us-descr">
+                            我们很乐意收到您的来信
+                        </div>
+                        <div
+                            class="card-list">
+                            <div
+                                class="card">
+                                <div
+                                    class="card-icon">
+                                    <img src="./imgs/contact-us-icon-1.png"/>
+                                </div>
+                                <div
+                                    class="card-label">
+                                    数智本体 GitHub Tracker
+                                </div>
+                                <div
+                                    class="card-descr">
+                                    数智本体的首选联系渠道是GitHub Issue Tracker
+                                </div>
+                                <div
+                                    class="card-btn">
+                                    <el-button
+                                        class="home-btn"
+                                        round
+                                        @click="goTo('https://github.com/asiainfo/ODLM-Ontology/issues')">
+                                        Open New Issue
+                                    </el-button>
+                                </div>
+                            </div>
+                            <div
+                                class="card">
+                                <div
+                                    class="card-icon">
+                                    <img src="./imgs/contact-us-icon-2.png"/>
+                                </div>
+                                <div
+                                    class="card-label">
+                                    网络本体 GitHub Tracker
+                                </div>
+                                <div
+                                    class="card-descr">
+                                    数智本体的首选联系渠道是GitHub Issue Tracker
+                                </div>
+                                <div
+                                    class="card-btn">
+                                    <el-button
+                                        class="home-btn"
+                                        round
+                                        @click="goTo('https://github.com/asiainfo/AN-Ontology/issues')">
+                                        Open New Issue
+                                    </el-button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer">
+                    <div class="content">
+                        <div
+                            class="link">
+                            <div class="pos-left">
+                                <img src="./imgs/asiainfo-logo-white.png"/>
+                            </div>
+                            <div class="pos-right">
+                                <el-link type="info" href="https://element-plus.org" target="_blank">GitHub</el-link>
+                                <el-link type="info" href="https://element-plus.org" target="_blank">联系我们</el-link>
+                            </div>
+                        </div>
+                        <p>&copy; 2025 亚信科技.备 xxxxxxxxxx号</p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 
     <script>
-        const { createApp } = Vue;
+        const { createApp, ref, onMounted } = Vue;
         
         const app = createApp({
             setup() {
-                return {
+                const scrollPosition = ref(0);
+                
+                const handleScroll = (e) => {
+                    scrollPosition.value = e.target.scrollTop;
                 };
+
+                const handleGithubCommand = (command) => {
+                    if (command === 'odlm') {
+                        window.open('https://github.com/asiainfo/ODLM-Ontology');
+                    } else {
+                        window.open('https://github.com/asiainfo/AN-Ontology');
+                    }
+                }
+                const scrollToTarget = (targetId) => {
+                    // window.location.hash = ''; 
+                    const target = document.getElementById(targetId);
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start',
+                            inline: 'nearest'
+                        });
+                    }
+                }
+                const goToSection = (targetId) => {
+                    scrollToTarget(targetId)
+                }
+
+                const goTo = (href) => {
+                    window.open(href);
+                }
+                
+                return {
+                    scrollPosition,
+                    handleScroll,
+                    scrollToTarget,
+                    handleGithubCommand,
+                    goToSection,
+                    goTo
+                };
+            },
+            onMounted() {
             }
         });
         app.use(ElementPlus);
