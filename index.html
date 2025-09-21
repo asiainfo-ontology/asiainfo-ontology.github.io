@@ -49,24 +49,26 @@
                                 </span>
                                 <template #dropdown>
                                     <el-dropdown-menu>
-                                        <el-dropdown-item command="odlm">ODLM</el-dropdown-item>
-                                        <el-dropdown-item command="ontology">AN Ontology</el-dropdown-item>
+                                        <el-dropdown-item command="odlm">数据管治本体</el-dropdown-item>
+                                        <el-dropdown-item command="ontology">物联网投诉工单本体</el-dropdown-item>
                                     </el-dropdown-menu>
                                 </template>
                             </el-dropdown>
-                            <div class="el-link" @click="scrollToTarget('contact')">联系我们</div>
+                            <div class="el-link" @click="scrollToTarget('resource')">联系我们</div>
                         </div>
                     </div>
                 </div>
-                <div class="banner">
+                <div
+                    id="banner"
+                    class="banner">
                     <div class="content">
                         <div
                             class="pos-left">
                             <div class="title">
-                                亚信科技数智本体
+                                亚信科技本体
                             </div>
                             <div class="descr">
-                                在AI重塑产业格局的时代，数智本体作为企业认知的“操作系统”，为大模型赋予结构化世界观。它将业务对象、规则与能力深度融合，打通语义理解、逻辑推理与系统执行的闭环，让AI从“泛化生成”跃迁至“精准决策”。通过本体驱动，大模型不再浮于表层问答，而是深度融入业务脉络，实现可解释、可追溯、可控制的智能自治，成为企业战略落地的数字引擎。
+                                在AI重塑产业格局的时代，亚信科技本体作为企业认知的“操作系统”，为大模型赋予结构化世界观。它将业务对象、规则与能力深度融合，打通语义理解、逻辑推理与系统执行的闭环，让AI从“泛化生成”跃迁至“精准决策”。通过本体驱动，大模型不再浮于表层问答，而是深度融入业务脉络，实现可解释、可追溯、可控制的智能自治，成为企业战略落地的数字引擎。
                             </div>
                             <div class="btn-group">
                                 <el-button
@@ -79,7 +81,7 @@
                                     round
                                     class="home-btn"
                                     @click="goToSection('resource')">
-                                    自智网络本体
+                                    物联网投诉工单本体
                                 </el-button>
                             </div>
                         </div>
@@ -89,45 +91,260 @@
                         </div>
                     </div>
                 </div>
-                <div id="resource" class="resource">
+                <div class="resource">
                     <img src="./imgs/resource-bg-circle.png"/>
+
                     <div class="content">
                         <div
-                            class="card">
-                            <img src="./imgs/resource-icon-1.png"/>
+                            class="resource-title">
+                            亚信科技本体体系
+                        </div>
+                        <div
+                            class="resource-descr">
+                            亚信科技本体体系基于渊思可组装数智设施整体架构，通过构建数智本体、云网本体、IT本体三大本体体系，驱动企业从流程自动化向智能决策跃迁，构建“感知-决策-执行-优化”的全链路价值闭环。
+                        </div>
+                        <div
+                            class="resource-intro-img">
                             <div
-                                class="card-content">
-                                <div class="card-label">
-                                    数据管治本体
+                                :style="{
+                                    padding: '24px',
+                                    background: '#fff',
+                                    fontSize: '16px',
+                                    fontFamily: 'HarmonyOS Sans SC'
+                                }">
+                                <div
+                                    :style="{
+                                        display: 'flex',
+                                        columnGap: '24px'
+                                    }">
+                                    <div
+                                        :style="{
+                                            width: 'calc((100% - 48px) / 3)'
+                                        }">
+                                        <div
+                                            :style="{
+                                                height: '40px',
+                                                lineHeight: '40px',
+                                                color: '#fff',
+                                                background: '#F09324',
+                                                textAlign: 'center',
+                                                fontWeight: 600
+                                            }">
+                                            数智本体体系
+                                        </div>
+                                        <div
+                                            :style="{
+                                                display: 'flex',
+                                                columnGap: '10px',
+                                                flexWrap: 'wrap',
+                                                marginTop: '12px'
+                                            }">
+                                            <div
+                                                v-for="item in [
+                                                    { text: '客户推荐本体' },
+                                                    { text: '客户体验本体' },
+                                                    { text: '数据管治本体', active: true },
+                                                    { text: '智能指标本体' }
+                                                ]"
+                                                :key="item.text"
+                                                :style="{
+                                                    width: 'calc((100% - 10px) / 2)',
+                                                    height: '65px',
+                                                    lineHeight: '65px',
+                                                    background: item.active ? '#fff' : '#FFF5E8',
+                                                    textAlign: 'center',
+                                                    marginBottom: '10px',
+                                                    color: item.active ? '#D77500' : '#021320',
+                                                    border: item.active ? '1px solid #F09324' : '0px',
+                                                    boxShadow: item.active ? '0px 0px 6px rgba(240, 147, 36, 0.6)' : 'none'
+                                                }">
+                                                {{item.text}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        :style="{
+                                            width: 'calc((100% - 48px) / 3)'
+                                        }">
+                                        <div
+                                            :style="{
+                                                height: '40px',
+                                                lineHeight: '40px',
+                                                color: '#fff',
+                                                background: '#4BAA7E',
+                                                textAlign: 'center',
+                                                fontWeight: 600
+                                            }">
+                                            云网本体体系
+                                        </div>
+                                        <div
+                                            :style="{
+                                                display: 'flex',
+                                                columnGap: '10px',
+                                                flexWrap: 'wrap',
+                                                marginTop: '12px'
+                                            }">
+                                            <div
+                                                v-for="item in [
+                                                    { text: '资源管理本体' },
+                                                    { text: '云网数字孪生本体' },
+                                                    { text: '数据自愈本体' },
+                                                    { text: '故障处理本体' },
+                                                    { text: '物联网投诉工单本体', active: true },
+                                                    { text: '无线质量本体' }
+                                                ]"
+                                                :key="item.text"
+                                                :style="{
+                                                    width: 'calc((100% - 10px) / 2)',
+                                                    height: '40px',
+                                                    lineHeight: '40px',
+                                                    background: item.active ? '#fff' : '#D3F5E5',
+                                                    textAlign: 'center',
+                                                    marginBottom: '10px',
+                                                    color: item.active ? '#00914E' : '#021320',
+                                                    border: item.active ? '1px solid #4BAA7E' : '0px',
+                                                    boxShadow: item.active ? '0px 0px 6px rgba(75, 170, 126, 0.6)' : 'none'
+                                                }">
+                                                {{item.text}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        :style="{
+                                            width: 'calc((100% - 48px) / 3)'
+                                        }">
+                                        <div
+                                            :style="{
+                                                height: '40px',
+                                                lineHeight: '40px',
+                                                color: '#fff',
+                                                background: '#147BD1',
+                                                textAlign: 'center',
+                                                fontWeight: 600
+                                            }">
+                                            IT本体体系
+                                        </div>
+                                        <div
+                                            :style="{
+                                                display: 'flex',
+                                                columnGap: '10px',
+                                                flexWrap: 'wrap',
+                                                marginTop: '12px'
+                                            }">
+                                            <div
+                                                v-for="(item, index) in [
+                                                    { text: '账单助手本体' },
+                                                    { text: '产品规则本体' },
+                                                    { text: '客户画像本体' }
+                                                ]"
+                                                :key="item.text"
+                                                :style="{
+                                                    width: index === 2 ? '100%' : 'calc((100% - 10px) / 2)',
+                                                    height: '65px',
+                                                    lineHeight: '65px',
+                                                    background: item.active ? '#fff' : '#DDF0FF',
+                                                    textAlign: 'center',
+                                                    marginBottom: '10px',
+                                                    color: item.active ? '#D77500' : '#021320',
+                                                    border: item.active ? '1px solid #F09324' : '0px'
+                                                }">
+                                                {{item.text}}
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="card-name">
-                                    Ontology for Data Lake Management
-                                </div>
-                                <div class="card-descr">
-                                    数据管治本体（Ontology for Data Lake Management，ODLM）是基于本体论构建的标准化语义模型，为数据湖提供端到端的数据治理框架。它系统化定义数据源、数据集、加工任务、指标、血缘关系与权限策略等核心要素，构建可机读、可推理的数据本体地图。ODLM不仅实现元数据的统一管理，更使AI能深度理解数据资产的上下文与关联。通过融合底层加工血缘与业务语义关系，可自动发现对象间的隐性关联，揭示跨域数据逻辑，支撑智能数据检索、影响分析与合规管控，释放数据湖的深层价值。
-                                </div>
-                                <div class="card-btn">
-                                    <el-button class="home-btn" round>下载OWL</el-button>
+                                <div>
+                                    <div
+                                        :style="{
+                                            height: '40px',
+                                            lineHeight: '40px',
+                                            background: '#EFF4F9',
+                                            textAlign: 'center',
+                                            marginTop: '14px'
+                                        }">
+                                        渊思•可组装数智设施
+                                    </div>
+                                    <div
+                                        :style="{
+                                            height: '110px',
+                                            padding: '24px 150px',
+                                            background: '#F9FBFD',
+                                            display: 'flex',
+                                            columnGap: '80px',
+                                            alignItems: 'center'
+                                        }">
+                                        <img src="./imgs/icon__1.png"/>
+                                        <div class="split"></div>
+                                        <img src="./imgs/icon__2.png"/>
+                                        <div class="split"></div>
+                                        <img src="./imgs/icon__3.png"/>
+                                        <div class="split"></div>
+                                        <img src="./imgs/icon__4.png"/>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div
-                            class="card">
-                            <img src="./imgs/resource-icon-2.png"/>
+                            id="resource"
+                            class="card-group">
                             <div
-                                class="card-content">
-                                <div class="card-label">
-                                    自智网络本体
+                                class="card">
+                                <img src="./imgs/resource-icon-1.png"/>
+                                <div
+                                    class="card-content">
+                                    <div class="card-label">
+                                        数据管治本体
+                                    </div>
+                                    <div class="card-name">
+                                        Ontology for Data Lake Management
+                                    </div>
+                                    <div class="card-descr">
+                                        数据管治本体（Ontology for Data Lake Management，ODLM）是一种基于本体论的标准化语义模型，专为数据湖提供端到端数据治理框架。它系统化定义数据源、数据集、加工任务等核心要素，不仅统一管理元数据，同时支持AI深度理解数据上下文。通过融合底层血缘与业务语义，自动揭示隐性关联和跨域数据逻辑，支撑智能检索、影响分析和合规管控，从而释放数据深层价值。
+                                    </div>
+                                    <div class="card-btn">
+                                        <el-button
+                                            class="home-btn"
+                                            round
+                                            @click="goTo('https://github.com/asiainfo/ODLM-Ontology/blob/main/odlm.ttl')">
+                                            Open OWL
+                                        </el-button>
+                                        <el-button
+                                            class="home-btn"
+                                            round
+                                            @click="goTo('https://github.com/asiainfo/ODLM-Ontology/issues')">
+                                            Open New Issue
+                                        </el-button>
+                                    </div>
                                 </div>
-                                <div class="card-name">
-                                    AN Ontology
-                                </div>
-                                <div class="card-descr">
-                                    自智网络本体（Autonomy Network Ontology，AN Ontology）是面向自智网络的统一语义框架，系统化定义网元、链路、服务、告警、工单、SLA等核心实体及其动态关系，构建可机读、可推理的网络知识基座。它使AI深入理解网络拓扑、业务依赖与运维逻辑，消除大模型在复杂场景中的语义幻觉，实现精准根因分析、影响评估与处置决策。支持自动故障检测、智能修复、闭环工单与资源自优，推动网络从“人工干预”向“高阶自治”持续演进，为通信网络的智能
-                                    化运维提供坚实认知底座。
-                                </div>
-                                <div class="card-btn">
-                                    <el-button class="home-btn" round>下载OWL</el-button>
+                            </div>
+                            <div
+                                class="card">
+                                <img src="./imgs/resource-icon-2.png"/>
+                                <div
+                                    class="card-content">
+                                    <div class="card-label">
+                                        物联网投诉工单本体
+                                    </div>
+                                    <div class="card-name">
+                                        IoT Complaint Ticket Ontology
+                                    </div>
+                                    <div class="card-descr">
+                                        物联网投诉工单本体（IoT Complaint Ticket Ontology）,把工单结构、处理规则及历史经验结构化,为工单处理场景提供统一语义模型；智能体据此快速解析投诉文本，进行逻辑推理和数据协调，自动输出定位结论与回单建议，实现工单处理从经验驱动到知识驱动的跃迁。
+                                    </div>
+                                    <div class="card-btn">
+                                        <el-button
+                                            class="home-btn"
+                                            round
+                                            @click="goTo('https://github.com/asiainfo/AN-Ontology/blob/main/iot-fault-ticket-ontology.ttl')">
+                                            Open OWL
+                                        </el-button>
+                                        <el-button
+                                            class="home-btn"
+                                            round
+                                            @click="goTo('https://github.com/asiainfo/AN-Ontology/issues')">
+                                            Open New Issue
+                                        </el-button>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -153,7 +370,7 @@
                                 </div>
                                 <div
                                     class="card-descr">
-                                    亚信科技数智本体项目致力于构建一个安全、开放且透明的协作环境，确保所有参与者都能平等地贡献和受益。通过标准化接口与模块化设计，我们支持与其他第三方平台工具及业务场景进行快速集成，提供本体数据、逻辑推理与行动执行服务。无论您是开发者、企业用户还是研究机构，都可以轻松接入并利用我们的资源，共同推动智能系统的创新发展。我们坚信，只有在一个公开透明的环境中，才能最大化地激发集体智慧，实现多方共赢。
+                                    亚信科技本体项目打造开放协作平台，通过标准化接口支持快速集成第三方系统，提供数据、推理与执行服务。开发者、企业和研究机构均可接入资源，共同推动智能创新。我们相信透明环境能激发集体智慧，实现多方共赢。
                                 </div>
                             </div>
                             <div
@@ -175,7 +392,7 @@
                                 </div>
                                 <div
                                     class="card-descr">
-                                    我们的社区汇聚了来自不同企业、院校及研究机构的专业人士，形成了一个多元化且充满活力的合作网络。社区成员在问题跟踪、功能优化和技术讨论中表现活跃且响应迅速，积极分享各自的经验与见解。无论是对本体论内容的细化完善，还是对技术基础设施的持续改进，每个参与者都在为提升系统性能贡献力量。这种跨领域、多层次的合作模式不仅加速了技术创新，还促进了知识的广泛传播，使得每一个新版本都凝聚了众多专家的心血结晶。
+                                    我们的社区汇聚企业、院校和研究机构的专业人士，形成多元化协作网络。成员积极参与问题跟踪、功能优化和技术讨论，分享经验见解，共同完善本体内容和基础设施。跨领域合作加速创新，促进知识共享，每个新版本都凝聚专家智慧。
                                 </div>
                             </div>
                         </div>
@@ -189,7 +406,7 @@
                                 </div>
                                 <div
                                     class="card-descr">
-                                    为了确保广泛的兼容性和易用性，亚信科技数智本体均采用OWL（RDF/XML格式）标准发布，可通过GitHub便捷获取。每个下载文件均附带可解析的版本IRI，确保持久化引用与访问，便于用户追踪版本更新及历史变更。这一标准化格式不仅简化了数据交换过程，还提升了系统的互操作性，方便各类应用无缝集成。此外，我们提供了详细的文档和支持资源，帮助用户快速上手并充分利用本体的各项功能，助力企业在智能化转型道路上迈出坚实步伐。
+                                    亚信科技本体采用OWL（RDF/XML）标准发布，用户可通过GitHub获取。文件含版本IRI，便于追踪更新。标准化格式提升互操作性，支持无缝集成。我们还提供详细文档和支持资源，助力用户快速上手，推动企业智能化转型。
                                 </div>
                             </div>
                             <div
@@ -203,51 +420,82 @@
                     <div class="content">
                         <div
                             class="partner-label">
-                            合作伙伴用户
+                            联合单位
                         </div>
                         <div
                             class="partner-descr">
-                            社区生态合作伙伴用户
+                            社区生态合作伙伴
                         </div>
                         <div
                             class="card-list">
                             <div
                                 class="card">
-                                <img style="height: 60px;" src="./imgs/partner-1.png"/>
+                                <img src="./imgs/济南大学logo 2.jpg"/>
                             </div>
                             <div
                                 class="card">
-                                <img src="./imgs/partner-2.png"/>
+                                <img src="./imgs/同济大学logo.jpg"/>
                             </div>
                             <div
                                 class="card">
-                                <img src="./imgs/partner-3.png"/>
+                                <img src="./imgs/阿尔伯塔大学.png"/>
                             </div>
                             <div
                                 class="card">
+                                <img src="./imgs/中山大学.png"/>
                             </div>
                             <div
                                 class="card">
+                                <img src="./imgs/香港理工.png"/>
                             </div>
                             <div
                                 class="card">
+                                <img style="width: calc(100% - 40px); height: auto" src="./imgs/清华AIR.jpg"/>
                             </div>
                             <div
                                 class="card">
+                                <img src="./imgs/阿里.png"/>
                             </div>
                             <div
                                 class="card">
+                                <img src="./imgs/紫金山logo.png"/>
                             </div>
                             <div
                                 class="card">
+                                <img style="width: calc(100% - 40px); height: auto" src="./imgs/电信研究院.png"/>
                             </div>
                             <div
                                 class="card">
+                                <img src="./imgs/中国移动.png"/>
+                            </div>
+                            <div
+                                class="card">
+                                <img src="./imgs/上海垣信.png"/>
+                            </div>
+                            <div
+                                class="card">
+                                <img src="./imgs/veryK.png"/>
+                            </div>
+                            <div
+                                class="card">
+                                <img src="./imgs/IEEEpng.png"/>
+                            </div>
+                            <div
+                                class="card">
+                                <img src="./imgs/intel.png"/>
+                            </div>
+                            <div
+                                class="card">
+                                <img src="./imgs/Ascend.png"/>
+                            </div>
+                            <div
+                                class="card">
+                                <img src="./imgs/BMO.png"/>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="customer-testimonials">
+                <!--<div class="customer-testimonials">
                     <img src="./imgs/customer-testimonials-bg.png"/>
                     <div class="content">
                         <div
@@ -303,8 +551,8 @@
                             </div>
                         </div>
                     </div>
-                </div>
-                <div id="contact" class="contact-us">
+                </div>-->
+                <!--<div id="contact" class="contact-us">
                     <img src="./imgs/contact-us-bg.png"/>
                     <div class="content">
                         <div
@@ -367,7 +615,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>-->
                 <div class="footer">
                     <div class="content">
                         <div
@@ -376,11 +624,19 @@
                                 <img src="./imgs/asiainfo-logo-white.png"/>
                             </div>
                             <div class="pos-right">
-                                <el-link type="info" href="https://element-plus.org" target="_blank">GitHub</el-link>
-                                <el-link type="info" href="https://element-plus.org" target="_blank">联系我们</el-link>
+                                <div
+                                    class="el-link"
+                                    @Click="reload">
+                                    GitHub
+                                </div>
+                                <div
+                                    class="el-link"
+                                    @Click="goToSection('resource')">
+                                    联系我们
+                                </div>
                             </div>
                         </div>
-                        <p>&copy; 2025 亚信科技.备 xxxxxxxxxx号</p>
+                        <!--<p>&copy; 2025 亚信科技.备 xxxxxxxxxx号</p>-->
                     </div>
                 </div>
             </div>
@@ -423,6 +679,10 @@
                 const goTo = (href) => {
                     window.open(href);
                 }
+
+                const reload = () => {
+                    window.location.reload()
+                }
                 
                 return {
                     scrollPosition,
@@ -430,7 +690,8 @@
                     scrollToTarget,
                     handleGithubCommand,
                     goToSection,
-                    goTo
+                    goTo,
+                    reload
                 };
             },
             onMounted() {

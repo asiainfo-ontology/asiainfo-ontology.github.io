@@ -185,10 +185,44 @@ button.home-btn.is-round {
     top: 180px;
     right: -60px;
 }
+.resource .resource-title {
+    color: rgba(0, 0, 0, 0.95);
+    font-family: "HarmonyOS Sans SC";
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 40px; 
+    margin-bottom: 12px;
+    text-align: center;
+}
+.resource .resource-descr {
+    color: rgba(0, 0, 0, 0.50);
+    text-align: center;
+    font-family: "HarmonyOS Sans SC";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px; /* 187.5% */
+    margin: 0px 100px;
+    margin-bottom: 50px;
+    text-align: left;
+}
+.resource .resource-intro-img img {
+    width: 62px;
+    height: 62px;
+}
+.resource .resource-intro-img .split {
+    height: 22px;
+    width: 1px;
+    background: #E3E9EF;
+}
 .resource > .content {
-    height: 710px;
+}
+.resource > .content > .card-group {
+    height: 810px;
     display: flex;
     column-gap: 24px;
+    padding-top: 100px;
 }
 .resource > .content .card {
     width: calc(50% - 12px);
@@ -200,14 +234,16 @@ button.home-btn.is-round {
     position: absolute;
     top: 0px;
     left: calc(50% - 85px);
+    z-index: 1;
 }
 
 .resource > .content .card .card-content {
-    height: 600px;
+    height: 537px;
     padding: 50px;
     padding-top: 83px;
     border-radius: 10px;
     background: #FFF;
+    position: relative;
 }
 .resource > .content .card .card-content .card-label {
     color: rgba(0, 0, 0, 0.95);
@@ -231,7 +267,9 @@ button.home-btn.is-round {
     margin-bottom: 50px;
 }
 .resource > .content .card .card-content .card-btn {
-    
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
 }
 .community > .content {
     padding-top: 150px;
@@ -289,8 +327,12 @@ button.home-btn.is-round {
     width: 100%;
     height: 100%;
 }
+.partner {
+    background: #fafafa;
+}
 .partner > .content {
     padding-top: 150px;
+    padding-bottom: 110px;
 }
 .partner > .content .partner-label {
     color: rgba(0, 0, 0, 0.95);
@@ -312,7 +354,6 @@ button.home-btn.is-round {
     display: flex;
     column-gap: 24px;
     flex-wrap: wrap;
-    margin-bottom: 110px;
 }
 .partner > .content .card-list .card {
     width: calc((100% - 24px * 4) / 5);
@@ -477,7 +518,7 @@ button.home-btn.is-round {
 }
 
 .footer {
-    height: 200px;
+    height: 138px;
     padding-top: 50px;
     background: #464F5F;
     color: rgba(255, 255, 255, 0.85);
