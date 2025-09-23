@@ -51,7 +51,7 @@
                                 <template #dropdown>
                                     <el-dropdown-menu>
                                         <el-dropdown-item command="odlm">数据管治本体</el-dropdown-item>
-                                        <el-dropdown-item command="ontology">物联网投诉工单本体</el-dropdown-item>
+                                        <el-dropdown-item command="ontology">自智网络本体</el-dropdown-item>
                                     </el-dropdown-menu>
                                 </template>
                             </el-dropdown>
@@ -82,7 +82,7 @@
                                     round
                                     class="home-btn"
                                     @click="goToSection('resource')">
-                                    物联网投诉工单本体
+                                    自智网络本体
                                 </el-button>
                             </div>
                         </div>
@@ -102,7 +102,7 @@
                         </div>
                         <div
                             class="resource-descr">
-                            亚信科技本体体系基于渊思可组装数智设施整体架构，通过构建数智本体、云网本体、IT本体三大本体体系，驱动企业从流程自动化向智能决策跃迁，构建“感知-决策-执行-优化”的全链路价值闭环。
+                            亚信科技通过构建数字资产管治本体、业务支撑本体和自智网络本体三大核心体系，三大体系协同运作，赋能通信、能源、政务、交通等七大领域，形成“感知-决策-执行-优化”的闭环，助力企业降本增效，实现数据驱动的精准决策，推动企业从流程自动化向智能决策升级。
                         </div>
                         <div
                             class="resource-intro-img">
@@ -116,11 +116,72 @@
                                 <div
                                     :style="{
                                         display: 'flex',
+                                        columnGap: '12px',
+                                        marginBottom: '24px'
+                                    }">
+                                    <div
+                                        :style="{
+                                            width: 'calc((100% - 12px * 6) / 7)',
+                                            background: 'rgba(239, 244, 249, 0.7)',
+                                            padding: '20px 23px',
+                                            display: 'flex',
+                                            alignItems: 'center'
+                                        }"
+                                        v-for="item in [
+                                            {
+                                                label: '通信',
+                                                icon: 'icon_1.png'
+                                            },
+                                            {
+                                                label: '广电',
+                                                icon: 'icon_2.png'
+                                            },
+                                            {
+                                                label: '能源',
+                                                icon: 'icon_3.png'
+                                            },
+                                            {
+                                                label: '交通',
+                                                icon: 'icon_4.png'
+                                            },
+                                            {
+                                                label: '金融',
+                                                icon: 'icon_5.png'
+                                            },
+                                            {
+                                                label: '邮政',
+                                                icon: 'icon_6.png'
+                                            },
+                                            {
+                                                label: '政务',
+                                                icon: 'icon_7.png'
+                                            }
+                                        ]">
+                                        <span
+                                            :style="{
+                                                fontSize: '16px',
+                                                fontWeight: 600,
+                                                color: '#021320',
+                                                flex: 1
+                                            }">
+                                            {{item.label}}
+                                        </span>
+                                        <img
+                                            :style="{
+                                                width: '16px',
+                                                height: '16px'
+                                            }"
+                                            :src="`./imgs/${item.icon}`"/>
+                                    </div>
+                                </div>
+                                <div
+                                    :style="{
+                                        display: 'flex',
                                         columnGap: '24px'
                                     }">
                                     <div
                                         :style="{
-                                            width: 'calc((100% - 48px) / 3)'
+                                            width: 'calc((100% - 24px) / 2)'
                                         }">
                                         <div
                                             :style="{
@@ -131,27 +192,29 @@
                                                 textAlign: 'center',
                                                 fontWeight: 600
                                             }">
-                                            数智本体体系
+                                            自智网络本体
                                         </div>
                                         <div
                                             :style="{
                                                 display: 'flex',
-                                                columnGap: '10px',
+                                                columnGap: '12px',
                                                 flexWrap: 'wrap',
                                                 marginTop: '12px'
                                             }">
                                             <div
                                                 v-for="item in [
-                                                    { text: '客户推荐本体' },
-                                                    { text: '客户体验本体' },
-                                                    { text: '数据管治本体', active: true },
-                                                    { text: '智能指标本体' }
+                                                    { text: '网络资源本体' },
+                                                    { text: '核心网本体' },
+                                                    { text: '自智网络本体', active: true },
+                                                    { text: '无线质量本体' },
+                                                    { text: '资源数据自愈本体' },
+                                                    { text: '云网数字孪生本体' }
                                                 ]"
                                                 :key="item.text"
                                                 :style="{
-                                                    width: 'calc((100% - 10px) / 2)',
-                                                    height: '65px',
-                                                    lineHeight: '65px',
+                                                    width: 'calc((100% - 24px) / 3)',
+                                                    height: '62px',
+                                                    lineHeight: '62px',
                                                     background: item.active ? '#fff' : '#FFF5E8',
                                                     textAlign: 'center',
                                                     marginBottom: '10px',
@@ -165,7 +228,7 @@
                                     </div>
                                     <div
                                         :style="{
-                                            width: 'calc((100% - 48px) / 3)'
+                                            width: 'calc((100% - 24px) / 2)'
                                         }">
                                         <div
                                             :style="{
@@ -176,29 +239,29 @@
                                                 textAlign: 'center',
                                                 fontWeight: 600
                                             }">
-                                            云网本体体系
+                                            业务支撑本体
                                         </div>
                                         <div
                                             :style="{
                                                 display: 'flex',
-                                                columnGap: '10px',
+                                                columnGap: '12px',
                                                 flexWrap: 'wrap',
                                                 marginTop: '12px'
                                             }">
                                             <div
                                                 v-for="item in [
-                                                    { text: '资源管理本体' },
-                                                    { text: '云网数字孪生本体' },
-                                                    { text: '数据自愈本体' },
-                                                    { text: '故障处理本体' },
-                                                    { text: '物联网投诉工单本体', active: true },
-                                                    { text: '无线质量本体' }
+                                                    { text: '客户关系本体' },
+                                                    { text: '产品与服务本体' },
+                                                    { text: '营销与销售本体' },
+                                                    { text: '订单管理本体' },
+                                                    { text: '计费与收入本体' },
+                                                    { text: '客户服务本体' }
                                                 ]"
                                                 :key="item.text"
                                                 :style="{
-                                                    width: 'calc((100% - 10px) / 2)',
-                                                    height: '40px',
-                                                    lineHeight: '40px',
+                                                    width: 'calc((100% - 24px) / 3)',
+                                                    height: '62px',
+                                                    lineHeight: '62px',
                                                     background: item.active ? '#fff' : '#D3F5E5',
                                                     textAlign: 'center',
                                                     marginBottom: '10px',
@@ -210,9 +273,13 @@
                                             </div>
                                         </div>
                                     </div>
+                                    
+                                </div>
+                                <div>
                                     <div
                                         :style="{
-                                            width: 'calc((100% - 48px) / 3)'
+                                            width: 'calc((100% - 0px) / 1)',
+                                            marginTop: '12px'
                                         }">
                                         <div
                                             :style="{
@@ -223,64 +290,36 @@
                                                 textAlign: 'center',
                                                 fontWeight: 600
                                             }">
-                                            IT本体体系
+                                            数字资产管治本体
                                         </div>
                                         <div
                                             :style="{
                                                 display: 'flex',
-                                                columnGap: '10px',
+                                                columnGap: '12px',
                                                 flexWrap: 'wrap',
                                                 marginTop: '12px'
                                             }">
                                             <div
                                                 v-for="(item, index) in [
-                                                    { text: '账单助手本体' },
-                                                    { text: '产品规则本体' },
-                                                    { text: '客户画像本体' }
+                                                    { text: '数据管治本体' , active: true },
+                                                    { text: 'AI模型管治本体' },
+                                                    { text: '安全管治本体' },
+                                                    { text: '合规管治本体' }
                                                 ]"
                                                 :key="item.text"
                                                 :style="{
-                                                    width: index === 2 ? '100%' : 'calc((100% - 10px) / 2)',
-                                                    height: '65px',
-                                                    lineHeight: '65px',
+                                                    width: 'calc((100% - 36px) / 4)',
+                                                    height: '62px',
+                                                    lineHeight: '62px',
                                                     background: item.active ? '#fff' : '#DDF0FF',
                                                     textAlign: 'center',
-                                                    marginBottom: '10px',
-                                                    color: item.active ? '#D77500' : '#021320',
-                                                    border: item.active ? '1px solid #F09324' : '0px'
+                                                    color: item.active ? 'rgb(20, 123, 209)' : '#021320',
+                                                    border: item.active ? '1px solid rgb(20, 123, 209)' : '0px',
+                                                    boxShadow: item.active ? '0px 0px 6px rgba(20, 123, 209, 0.6)' : 'none'
                                                 }">
                                                 {{item.text}}
                                             </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div>
-                                    <div
-                                        :style="{
-                                            height: '40px',
-                                            lineHeight: '40px',
-                                            background: '#EFF4F9',
-                                            textAlign: 'center',
-                                            marginTop: '14px'
-                                        }">
-                                        渊思•可组装数智设施
-                                    </div>
-                                    <div
-                                        :style="{
-                                            height: '110px',
-                                            padding: '24px 150px',
-                                            background: '#F9FBFD',
-                                            display: 'flex',
-                                            columnGap: '80px',
-                                            alignItems: 'center'
-                                        }">
-                                        <img src="./imgs/icon__1.png"/>
-                                        <div class="split"></div>
-                                        <img src="./imgs/icon__2.png"/>
-                                        <div class="split"></div>
-                                        <img src="./imgs/icon__3.png"/>
-                                        <div class="split"></div>
-                                        <img src="./imgs/icon__4.png"/>
                                     </div>
                                 </div>
                             </div>
@@ -306,14 +345,14 @@
                                         <el-button
                                             class="home-btn"
                                             round
-                                            @click="goTo('https://github.com/asiainfo/ODLM-Ontology/blob/main/odlm.ttl')">
-                                            Open OWL
+                                            @click="goTo('https://github.com/asiainfo/ODLM-Ontology/blob/main/README.md')">
+                                            查看OWL
                                         </el-button>
                                         <el-button
                                             class="home-btn"
                                             round
                                             @click="goTo('https://github.com/asiainfo/ODLM-Ontology/issues')">
-                                            Open New Issue
+                                            新建问题
                                         </el-button>
                                     </div>
                                 </div>
@@ -324,26 +363,26 @@
                                 <div
                                     class="card-content">
                                     <div class="card-label">
-                                        物联网投诉工单本体
+                                        自智网络本体
                                     </div>
                                     <div class="card-name">
-                                        IoT Complaint Ticket Ontology
+                                        Autonomous Network Ontology
                                     </div>
                                     <div class="card-descr">
-                                        物联网投诉工单本体（IoT Complaint Ticket Ontology）,把工单结构、处理规则及历史经验结构化,为工单处理场景提供统一语义模型；智能体据此快速解析投诉文本，进行逻辑推理和数据协调，自动输出定位结论与回单建议，实现工单处理从经验驱动到知识驱动的跃迁。
+                                        自智网络的本体（Autonomous Network Ontology，AN Ontology）是对自智网络领域中的核心概念、实体、属性、关系以及约束规则进行的形式化、明确化的规范定义。它充当机器的“世界模型”，为智能体提供精确的推理依据，确保自然语言交互的准确性，并将高层业务意图转化为可执行的网络策略，是实现L4/L5级自智网络自动化与闭环决策的核心基石。
                                     </div>
                                     <div class="card-btn">
                                         <el-button
                                             class="home-btn"
                                             round
-                                            @click="goTo('https://github.com/asiainfo/AN-Ontology/blob/main/iot-fault-ticket-ontology.ttl')">
-                                            Open OWL
+                                            @click="goTo('https://github.com/asiainfo/AN-Ontology/blob/main/README.md')">
+                                            查看OWL
                                         </el-button>
                                         <el-button
                                             class="home-btn"
                                             round
                                             @click="goTo('https://github.com/asiainfo/AN-Ontology/issues')">
-                                            Open New Issue
+                                            新建问题
                                         </el-button>
                                     </div>
                                 </div>
@@ -431,55 +470,15 @@
                             class="card-list">
                             <div
                                 class="card">
-                                <img src="./imgs/济南大学logo 2.jpg"/>
-                            </div>
-                            <div
-                                class="card">
-                                <img src="./imgs/同济大学logo.jpg"/>
-                            </div>
-                            <div
-                                class="card">
-                                <img src="./imgs/阿尔伯塔大学.png"/>
-                            </div>
-                            <div
-                                class="card">
-                                <img src="./imgs/中山大学.png"/>
-                            </div>
-                            <div
-                                class="card">
-                                <img src="./imgs/香港理工.png"/>
-                            </div>
-                            <div
-                                class="card">
-                                <img style="width: calc(100% - 40px); height: auto" src="./imgs/清华AIR.jpg"/>
-                            </div>
-                            <div
-                                class="card">
-                                <img src="./imgs/阿里.png"/>
-                            </div>
-                            <div
-                                class="card">
-                                <img src="./imgs/紫金山logo.png"/>
+                                <img src="./imgs/中国移动.png"/>
                             </div>
                             <div
                                 class="card">
                                 <img style="width: calc(100% - 40px); height: auto" src="./imgs/电信研究院.png"/>
                             </div>
-                            <div
+                             <div
                                 class="card">
-                                <img src="./imgs/中国移动.png"/>
-                            </div>
-                            <div
-                                class="card">
-                                <img src="./imgs/上海垣信.png"/>
-                            </div>
-                            <div
-                                class="card">
-                                <img src="./imgs/veryK.png"/>
-                            </div>
-                            <div
-                                class="card">
-                                <img src="./imgs/IEEEpng.png"/>
+                                <img src="./imgs/阿里.png"/>
                             </div>
                             <div
                                 class="card">
@@ -487,12 +486,55 @@
                             </div>
                             <div
                                 class="card">
+                                <img src="./imgs/上海垣信.png"/>
+                            </div>
+                             <div
+                                class="card">
+                                <img src="./imgs/BMO.png"/>
+                            </div>
+                            <div
+                                class="card">
                                 <img src="./imgs/Ascend.png"/>
                             </div>
                             <div
                                 class="card">
-                                <img src="./imgs/BMO.png"/>
+                                <img src="./imgs/veryK.png"/>
                             </div>
+                            <div
+                                class="card">
+                                <img style="width: calc(100% - 40px); height: auto" src="./imgs/清华AIR.jpg"/>
+                            </div>
+                            <div
+                                class="card">
+                                <img src="./imgs/同济大学logo.jpg"/>
+                            </div>
+                            <div
+                                class="card">
+                                <img src="./imgs/中山大学.png"/>
+                            </div>
+                             <div
+                                class="card">
+                                <img src="./imgs/济南大学logo 2.jpg"/>
+                            </div>
+                            <div
+                                class="card">
+                                <img src="./imgs/紫金山logo.png"/>
+                            </div>
+                            <div
+                                class="card">
+                                <img src="./imgs/阿尔伯塔大学.png"/>
+                            </div>
+                            <div
+                                class="card">
+                                <img src="./imgs/香港理工.png"/>
+                            </div>
+                            <div
+                                class="card">
+                                <img src="./imgs/IEEEpng.png"/>
+                            </div>
+                            
+                            
+                           
                         </div>
                     </div>
                 </div>
