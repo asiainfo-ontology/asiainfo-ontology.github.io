@@ -180,10 +180,10 @@ button.home-btn.is-round {
     overflow: hidden;
 }
 .resource > img {
-    width: 268px;
+    width: 242px;
     position: absolute;
     top: 180px;
-    right: -60px;
+    right: -33px;
 }
 .resource .resource-title {
     color: rgba(0, 0, 0, 0.95);
@@ -217,6 +217,8 @@ button.home-btn.is-round {
     background: #E3E9EF;
 }
 .resource > .content {
+    position: relative;
+    z-index: 10;
 }
 .resource > .content > .card-group {
     height: 810px;
