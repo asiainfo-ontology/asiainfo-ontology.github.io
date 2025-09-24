@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>亚信科技本体</title>
+    <title>本体开源</title>
     <link rel="icon" type="image/png" href="./imgs/favicon.png">
     <link rel="stylesheet" href="./lib/element-plus/index.min.css">
     <link rel="stylesheet" href="./css/index.css">
@@ -27,7 +27,7 @@
                     <div class="content">
                         <div
                             class="pos-left">
-                            <img src="./imgs/asiainfo-logo.png"/>
+                            <img src="./imgs/logo1.png"/>
                         </div>
                         <div
                             class="pos-right">
@@ -66,10 +66,10 @@
                         <div
                             class="pos-left">
                             <div class="title">
-                                亚信科技本体
+                                本体开源库
                             </div>
                             <div class="descr">
-                                在AI重塑产业格局的时代，亚信科技本体作为企业认知的“操作系统”，为大模型赋予结构化世界观。它将业务对象、规则与能力深度融合，打通语义理解、逻辑推理与系统执行的闭环，让AI从“泛化生成”跃迁至“精准决策”。通过本体驱动，大模型不再浮于表层问答，而是深度融入业务脉络，实现可解释、可追溯、可控制的智能自治，成为企业战略落地的数字引擎。
+                                在AI重塑产业格局的时代，基于本体开源库，共同打造企业认知的“操作系统”，为大模型赋予结构化世界观。它将业务对象、规则与能力深度融合，打通语义理解、逻辑推理与系统执行的闭环，让AI从“泛化生成”跃迁至“精准决策”。通过本体驱动，大模型不再浮于表层问答，进而深度融入业务脉络，实现可解释、可追溯、可控制，成为企业战略落地的数字引擎。
                             </div>
                             <div class="btn-group">
                                 <el-button
@@ -97,232 +97,7 @@
 
                     <div class="content">
                         <div
-                            class="resource-title">
-                            亚信科技本体体系
-                        </div>
-                        <div
-                            class="resource-descr">
-                            亚信科技通过构建数字资产管治本体、业务支撑本体和自智网络本体三大核心体系，三大体系协同运作，赋能通信、能源、政务、交通等七大领域，形成“感知-决策-执行-优化”的闭环，助力企业降本增效，实现数据驱动的精准决策，推动企业从流程自动化向智能决策升级。
-                        </div>
-                        <div
                             class="resource-intro-img">
-                            <div
-                                :style="{
-                                    padding: '24px',
-                                    background: '#fff',
-                                    fontSize: '16px',
-                                    fontFamily: 'HarmonyOS Sans SC'
-                                }">
-                                <div
-                                    :style="{
-                                        display: 'flex',
-                                        columnGap: '12px',
-                                        marginBottom: '24px'
-                                    }">
-                                    <div
-                                        :style="{
-                                            width: 'calc((100% - 12px * 6) / 7)',
-                                            background: 'rgba(239, 244, 249, 0.7)',
-                                            padding: '20px 23px',
-                                            display: 'flex',
-                                            alignItems: 'center'
-                                        }"
-                                        v-for="item in [
-                                            {
-                                                label: '通信',
-                                                icon: 'icon_1.png'
-                                            },
-                                            {
-                                                label: '广电',
-                                                icon: 'icon_2.png'
-                                            },
-                                            {
-                                                label: '能源',
-                                                icon: 'icon_3.png'
-                                            },
-                                            {
-                                                label: '交通',
-                                                icon: 'icon_4.png'
-                                            },
-                                            {
-                                                label: '金融',
-                                                icon: 'icon_5.png'
-                                            },
-                                            {
-                                                label: '邮政',
-                                                icon: 'icon_6.png'
-                                            },
-                                            {
-                                                label: '政务',
-                                                icon: 'icon_7.png'
-                                            }
-                                        ]">
-                                        <span
-                                            :style="{
-                                                fontSize: '16px',
-                                                fontWeight: 600,
-                                                color: '#021320',
-                                                flex: 1
-                                            }">
-                                            {{item.label}}
-                                        </span>
-                                        <img
-                                            :style="{
-                                                width: '16px',
-                                                height: '16px'
-                                            }"
-                                            :src="`./imgs/${item.icon}`"/>
-                                    </div>
-                                </div>
-                                <div
-                                    :style="{
-                                        display: 'flex',
-                                        columnGap: '24px'
-                                    }">
-                                    <div
-                                        :style="{
-                                            width: 'calc((100% - 24px) / 2)'
-                                        }">
-                                        <div
-                                            :style="{
-                                                height: '40px',
-                                                lineHeight: '40px',
-                                                color: '#fff',
-                                                background: '#F09324',
-                                                textAlign: 'center',
-                                                fontWeight: 600
-                                            }">
-                                            自智网络本体
-                                        </div>
-                                        <div
-                                            :style="{
-                                                display: 'flex',
-                                                columnGap: '12px',
-                                                flexWrap: 'wrap',
-                                                marginTop: '12px'
-                                            }">
-                                            <div
-                                                v-for="item in [
-                                                    { text: '网络资源本体' },
-                                                    { text: '核心网本体' },
-                                                    { text: '物联网故障工单本体', active: true },
-                                                    { text: '无线质量本体' },
-                                                    { text: '资源数据自愈本体' },
-                                                    { text: '云网数字孪生本体' }
-                                                ]"
-                                                :key="item.text"
-                                                :style="{
-                                                    width: 'calc((100% - 24px) / 3)',
-                                                    height: '62px',
-                                                    lineHeight: '62px',
-                                                    background: item.active ? '#fff' : '#FFF5E8',
-                                                    textAlign: 'center',
-                                                    marginBottom: '10px',
-                                                    color: item.active ? '#D77500' : '#021320',
-                                                    border: item.active ? '1px solid #F09324' : '0px',
-                                                    boxShadow: item.active ? '0px 0px 6px rgba(240, 147, 36, 0.6)' : 'none'
-                                                }">
-                                                {{item.text}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div
-                                        :style="{
-                                            width: 'calc((100% - 24px) / 2)'
-                                        }">
-                                        <div
-                                            :style="{
-                                                height: '40px',
-                                                lineHeight: '40px',
-                                                color: '#fff',
-                                                background: '#4BAA7E',
-                                                textAlign: 'center',
-                                                fontWeight: 600
-                                            }">
-                                            业务支撑本体
-                                        </div>
-                                        <div
-                                            :style="{
-                                                display: 'flex',
-                                                columnGap: '12px',
-                                                flexWrap: 'wrap',
-                                                marginTop: '12px'
-                                            }">
-                                            <div
-                                                v-for="item in [
-                                                    { text: '客户关系本体' },
-                                                    { text: '产品与服务本体' },
-                                                    { text: '营销与销售本体' },
-                                                    { text: '订单管理本体' },
-                                                    { text: '计费与收入本体' },
-                                                    { text: '客户服务本体' }
-                                                ]"
-                                                :key="item.text"
-                                                :style="{
-                                                    width: 'calc((100% - 24px) / 3)',
-                                                    height: '62px',
-                                                    lineHeight: '62px',
-                                                    background: item.active ? '#fff' : '#D3F5E5',
-                                                    textAlign: 'center',
-                                                    marginBottom: '10px',
-                                                    color: item.active ? '#00914E' : '#021320',
-                                                    border: item.active ? '1px solid #4BAA7E' : '0px',
-                                                    boxShadow: item.active ? '0px 0px 6px rgba(75, 170, 126, 0.6)' : 'none'
-                                                }">
-                                                {{item.text}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                    
-                                </div>
-                                <div>
-                                    <div
-                                        :style="{
-                                            width: 'calc((100% - 0px) / 1)',
-                                            marginTop: '12px'
-                                        }">
-                                        <div
-                                            :style="{
-                                                height: '40px',
-                                                lineHeight: '40px',
-                                                color: '#fff',
-                                                background: '#147BD1',
-                                                textAlign: 'center',
-                                                fontWeight: 600
-                                            }">
-                                            数字资产管治本体
-                                        </div>
-                                        <div
-                                            :style="{
-                                                display: 'flex',
-                                                columnGap: '12px',
-                                                flexWrap: 'wrap',
-                                                marginTop: '12px'
-                                            }">
-                                            <div
-                                                v-for="(item, index) in [
-                                                    { text: '数据管治本体' , active: true },
-                                                    { text: 'AI模型管治本体' },
-                                                    { text: '安全管治本体' },
-                                                    { text: '合规管治本体' }
-                                                ]"
-                                                :key="item.text"
-                                                :style="{
-                                                    width: 'calc((100% - 36px) / 4)',
-                                                    height: '62px',
-                                                    lineHeight: '62px',
-                                                    background: item.active ? '#fff' : '#DDF0FF',
-                                                    textAlign: 'center',
-                                                    color: item.active ? 'rgb(20, 123, 209)' : '#021320',
-                                                    border: item.active ? '1px solid rgb(20, 123, 209)' : '0px',
-                                                    boxShadow: item.active ? '0px 0px 6px rgba(20, 123, 209, 0.6)' : 'none'
-                                                }">
-                                                {{item.text}}
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
                         <div
                             id="resource"
@@ -410,7 +185,7 @@
                                 </div>
                                 <div
                                     class="card-descr">
-                                    亚信科技本体项目打造开放协作平台，通过标准化接口支持快速集成第三方系统，提供数据、推理与执行服务。开发者、企业和研究机构均可接入资源，共同推动智能创新。我们相信透明环境能激发集体智慧，实现多方共赢。
+                                    本体开源项目打造开放协作平台，通过标准化接口支持快速集成第三方系统，提供数据、推理与执行服务。开发者、企业和研究机构均可接入资源，共同推动智能创新。我们相信透明环境能激发集体智慧，实现多方共赢。
                                 </div>
                             </div>
                             <div
@@ -446,7 +221,7 @@
                                 </div>
                                 <div
                                     class="card-descr">
-                                    亚信科技本体采用OWL（RDF/XML）标准发布，用户可通过GitHub获取。文件含版本IRI，便于追踪更新。标准化格式提升互操作性，支持无缝集成。我们还提供详细文档和支持资源，助力用户快速上手，推动企业智能化转型。
+                                    本体开源项目采用OWL（RDF/XML）标准发布，用户可通过GitHub获取。文件含版本IRI，便于追踪更新。标准化格式提升互操作性，支持无缝集成。我们还提供详细文档和支持资源，助力用户快速上手，推动企业智能化转型。
                                 </div>
                             </div>
                             <div
@@ -458,13 +233,24 @@
                 </div>
                 <div class="partner">
                     <div class="content">
+
+                        <div
+                            class="partner-label">
+                            主办单位
+                        </div>
+                        <div
+                            class="card-list"
+                            style="justifyContent: center;">
+                            <div
+                                class="card">
+                                <img src="./imgs/asiainfo-logo.png"/>
+                            </div>
+                        </div>
+
+
                         <div
                             class="partner-label">
                             联合单位
-                        </div>
-                        <div
-                            class="partner-descr">
-                            社区生态合作伙伴
                         </div>
                         <div
                             class="card-list">
@@ -478,16 +264,9 @@
                             </div>
                              <div
                                 class="card">
-                                <img src="./imgs/阿里.png"/>
+                                <img src="./imgs/高通.png"/>
                             </div>
-                            <div
-                                class="card">
-                                <img src="./imgs/intel.png"/>
-                            </div>
-                            <div
-                                class="card">
-                                <img src="./imgs/上海垣信.png"/>
-                            </div>
+                            
                              <div
                                 class="card">
                                 <img src="./imgs/BMO.png"/>
@@ -538,127 +317,7 @@
                         </div>
                     </div>
                 </div>
-                <!--<div class="customer-testimonials">
-                    <img src="./imgs/customer-testimonials-bg.png"/>
-                    <div class="content">
-                        <div
-                            class="customer-testimonials-label">
-                            客户赠言
-                        </div>
-                        <div
-                            class="card-list">
-                            <div
-                                class="card">
-                                <div
-                                    class="card-icon">
-                                </div>
-                                <div
-                                    class="card-content">
-                                    <div class="card-label">
-                                        赠言1
-                                    </div>
-                                    <div class="card-descr">
-                                        赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="card">
-                                <div
-                                    class="card-icon">
-                                </div>
-                                <div
-                                    class="card-content">
-                                    <div class="card-label">
-                                        赠言1
-                                    </div>
-                                    <div class="card-descr">
-                                        赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言
-                                    </div>
-                                </div>
-                            </div>
-                            <div
-                                class="card">
-                                <div
-                                    class="card-icon">
-                                </div>
-                                <div
-                                    class="card-content">
-                                    <div class="card-label">
-                                        赠言1
-                                    </div>
-                                    <div class="card-descr">
-                                        赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言内容赠言
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
-                <!--<div id="contact" class="contact-us">
-                    <img src="./imgs/contact-us-bg.png"/>
-                    <div class="content">
-                        <div
-                            class="contact-us-label">
-                            联系我们
-                        </div>
-                        <div
-                            class="contact-us-descr">
-                            我们很乐意收到您的来信
-                        </div>
-                        <div
-                            class="card-list">
-                            <div
-                                class="card">
-                                <div
-                                    class="card-icon">
-                                    <img src="./imgs/contact-us-icon-1.png"/>
-                                </div>
-                                <div
-                                    class="card-label">
-                                    数智本体 GitHub Tracker
-                                </div>
-                                <div
-                                    class="card-descr">
-                                    数智本体的首选联系渠道是GitHub Issue Tracker
-                                </div>
-                                <div
-                                    class="card-btn">
-                                    <el-button
-                                        class="home-btn"
-                                        round
-                                        @click="goTo('https://github.com/asiainfo/ODLM-Ontology/issues')">
-                                        Open New Issue
-                                    </el-button>
-                                </div>
-                            </div>
-                            <div
-                                class="card">
-                                <div
-                                    class="card-icon">
-                                    <img src="./imgs/contact-us-icon-2.png"/>
-                                </div>
-                                <div
-                                    class="card-label">
-                                    网络本体 GitHub Tracker
-                                </div>
-                                <div
-                                    class="card-descr">
-                                    数智本体的首选联系渠道是GitHub Issue Tracker
-                                </div>
-                                <div
-                                    class="card-btn">
-                                    <el-button
-                                        class="home-btn"
-                                        round
-                                        @click="goTo('https://github.com/asiainfo/AN-Ontology/issues')">
-                                        Open New Issue
-                                    </el-button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>-->
+                
                 <div class="footer">
                     <div class="content">
                         <div
@@ -679,7 +338,6 @@
                                 </div>
                             </div>
                         </div>
-                        <!--<p>&copy; 2025 亚信科技.备 xxxxxxxxxx号</p>-->
                     </div>
                 </div>
             </div>
@@ -744,5 +402,4 @@
         app.mount('#app');
     </script>
 </body>
-
 </html>

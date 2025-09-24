@@ -174,7 +174,7 @@ button.home-btn.is-round {
     border: 1.5px solid #F09324;
 }
 .resource {
-    padding: 150px 0px;
+    padding: 50px 0px;
     background-color: #fafafa;
     position: relative;
     overflow: hidden;
@@ -280,7 +280,7 @@ button.home-btn.is-round {
     font-size: 16px;
 }
 .community > .content {
-    padding-top: 150px;
+    padding-top: 90px;
 }
 .community > .content .community-label {
     color: rgba(0, 0, 0, 0.95);
@@ -560,4 +560,8 @@ button.home-btn.is-round {
 .content {
     width: 1080px;
     margin: 0px auto;
+}
+
+.header .content .pos-left img {
+    margin-left: -100px;
 }
