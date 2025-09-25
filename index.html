@@ -50,12 +50,12 @@
                                 </span>
                                 <template #dropdown>
                                     <el-dropdown-menu>
-                                        <el-dropdown-item command="odlm">数据管治本体</el-dropdown-item>
                                         <el-dropdown-item command="ontology">自智网络本体</el-dropdown-item>
+                                        <el-dropdown-item command="odlm">数据治理本体</el-dropdown-item>
                                     </el-dropdown-menu>
                                 </template>
                             </el-dropdown>
-                            <div class="el-link" @click="scrollToTarget('resource')">联系我们</div>
+                            <div class="el-link" @click="goTo('https://github.com/asiainfo/ODLM-Ontology/issues')">联系我们</div>
                         </div>
                     </div>
                 </div>
@@ -66,23 +66,23 @@
                         <div
                             class="pos-left">
                             <div class="title">
-                                本体开源库
+                                Ontology4AI
                             </div>
                             <div class="descr">
-                                在AI重塑产业格局的时代，基于本体开源库，共同打造企业认知的“操作系统”，为大模型赋予结构化世界观。它将业务对象、规则与能力深度融合，打通语义理解、逻辑推理与系统执行的闭环，让AI从“泛化生成”跃迁至“精准决策”。通过本体驱动，大模型不再浮于表层问答，进而深度融入业务脉络，实现可解释、可追溯、可控制，成为企业战略落地的数字引擎。
+                                Ontology4AI一个多家机构合作的中立组织，旨在汇聚AI时代各行业领域的本体模型，共同打造企业认知的“操作系统”，为大模型赋予结构化世界观。通过打通语义理解、逻辑推理与系统执行的闭环，实现可解释、可追溯、可控制，让AI从“泛化生成”跃迁至“精准决策”，成为企业战略落地的数字引擎。
                             </div>
                             <div class="btn-group">
                                 <el-button
                                     round
                                     class="home-btn"
                                     @click="goToSection('resource')">
-                                    数据管治本体
+                                    自智网络本体
                                 </el-button>
                                 <el-button
                                     round
                                     class="home-btn"
                                     @click="goToSection('resource')">
-                                    自智网络本体
+                                    数据治理本体
                                 </el-button>
                             </div>
                         </div>
@@ -97,41 +97,190 @@
 
                     <div class="content">
                         <div
+                            class="resource-title">
+                            面向AI的开源本体库
+                        </div>
+                        <div
+                            class="resource-descr">
+                            面向AI的本体开源库包括自智网络本体、数据治理本体两大本体库，优先开源物联网投诉工单本体、数据血缘本体，通过共享协作生态，赋能通信、能源、政务、交通等七大领域，形成“感知-决策-执行-优化”的闭环，实现数据驱动的精准决策，推动企业从流程自动化向智能决策升级。
+                        </div>
+
+                        <div
                             class="resource-intro-img">
+
+                            <div
+                                :style="{
+                                    padding: '24px',
+                                    background: '#fff',
+                                    fontSize: '16px',
+                                    fontFamily: 'HarmonyOS Sans SC'
+                                }">
+                                <div
+                                    :style="{
+                                        display: 'flex',
+                                        columnGap: '12px',
+                                        marginBottom: '24px'
+                                    }">
+                                    <div
+                                        :style="{
+                                            width: 'calc((100% - 12px * 6) / 7)',
+                                            background: 'rgba(239, 244, 249, 0.7)',
+                                            padding: '20px 23px',
+                                            display: 'flex',
+                                            alignItems: 'center'
+                                        }"
+                                        v-for="item in [
+                                            {
+                                                label: '通信',
+                                                icon: 'icon_1.png'
+                                            },
+                                            {
+                                                label: '广电',
+                                                icon: 'icon_2.png'
+                                            },
+                                            {
+                                                label: '能源',
+                                                icon: 'icon_3.png'
+                                            },
+                                            {
+                                                label: '交通',
+                                                icon: 'icon_4.png'
+                                            },
+                                            {
+                                                label: '金融',
+                                                icon: 'icon_5.png'
+                                            },
+                                            {
+                                                label: '邮政',
+                                                icon: 'icon_6.png'
+                                            },
+                                            {
+                                                label: '政务',
+                                                icon: 'icon_7.png'
+                                            }
+                                        ]">
+                                        <span
+                                            :style="{
+                                                fontSize: '16px',
+                                                fontWeight: 600,
+                                                color: '#021320',
+                                                flex: 1
+                                            }">
+                                            {{item.label}}
+                                        </span>
+                                        <img
+                                            :style="{
+                                                width: '16px',
+                                                height: '16px'
+                                            }"
+                                            :src="`./imgs/${item.icon}`"/>
+                                    </div>
+                                </div>
+                                <div
+                                    :style="{
+                                        display: 'flex',
+                                        columnGap: '24px'
+                                    }">
+                                    <div
+                                        :style="{
+                                            width: 'calc((100% - 24px) / 2)'
+                                        }">
+                                        <div
+                                            :style="{
+                                                height: '40px',
+                                                lineHeight: '40px',
+                                                color: '#fff',
+                                                background: '#F09324',
+                                                textAlign: 'center',
+                                                fontWeight: 600
+                                            }">
+                                            自智网络本体
+                                        </div>
+                                        <div
+                                            :style="{
+                                                display: 'flex',
+                                                columnGap: '12px',
+                                                flexWrap: 'wrap',
+                                                marginTop: '12px'
+                                            }">
+                                            <div
+                                                v-for="item in [
+                                                    { text: '网络资源本体' },
+                                                    { text: '核心网本体' },
+                                                    { text: '物联网投诉工单本体', active: true },
+                                                    { text: '无线质量本体' },
+                                                    { text: '资源数据自愈本体' },
+                                                    { text: '云网数字孪生本体' }
+                                                ]"
+                                                :key="item.text"
+                                                :style="{
+                                                    width: 'calc((100% - 24px) / 3)',
+                                                    height: '62px',
+                                                    lineHeight: '62px',
+                                                    background: item.active ? '#fff' : '#FFF5E8',
+                                                    textAlign: 'center',
+                                                    marginBottom: '10px',
+                                                    color: item.active ? '#D77500' : '#021320',
+                                                    border: item.active ? '1px solid #F09324' : '0px',
+                                                    boxShadow: item.active ? '0px 0px 6px rgba(240, 147, 36, 0.6)' : 'none'
+                                                }">
+                                                {{item.text}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div
+                                        :style="{
+                                            width: 'calc((100% - 24px) / 2)'
+                                        }">
+                                        <div
+                                            :style="{
+                                                height: '40px',
+                                                lineHeight: '40px',
+                                                color: '#fff',
+                                                background: '#4BAA7E',
+                                                textAlign: 'center',
+                                                fontWeight: 600
+                                            }">
+                                            数据治理本体
+                                        </div>
+                                        <div
+                                            :style="{
+                                                display: 'flex',
+                                                columnGap: '12px',
+                                                flexWrap: 'wrap',
+                                                marginTop: '12px'
+                                            }">
+                                            <div
+                                                v-for="item in [
+                                                    { text: '数据血缘本体' , active: true },
+                                                    { text: '元数据管理本体' },
+                                                    { text: '数据质量本体' },
+                                                    { text: '数据标准本体' },
+                                                    { text: '数据指标本体' },
+                                                    { text: '安全合规本体' }
+                                                ]"
+                                                :key="item.text"
+                                                :style="{
+                                                    width: 'calc((100% - 24px) / 3)',
+                                                    height: '62px',
+                                                    lineHeight: '62px',
+                                                    background: item.active ? '#fff' : '#D3F5E5',
+                                                    textAlign: 'center',
+                                                    marginBottom: '10px',
+                                                    color: item.active ? '#00914E' : '#021320',
+                                                    border: item.active ? '1px solid #4BAA7E' : '0px',
+                                                    boxShadow: item.active ? '0px 0px 6px rgba(75, 170, 126, 0.6)' : 'none'
+                                                }">
+                                                {{item.text}}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <div
                             id="resource"
                             class="card-group">
-                            <div
-                                class="card">
-                                <img src="./imgs/resource-icon-1.png"/>
-                                <div
-                                    class="card-content">
-                                    <div class="card-label">
-                                        数据管治本体
-                                    </div>
-                                    <div class="card-name">
-                                        Ontology for Data Lake Management
-                                    </div>
-                                    <div class="card-descr">
-                                        数据管治本体（Ontology for Data Lake Management，ODLM）是一种基于本体论的标准化语义模型，专为数据湖提供端到端数据治理框架。它系统化定义数据源、数据集、加工任务等核心要素，不仅统一管理元数据，同时支持AI深度理解数据上下文。通过融合底层血缘与业务语义，自动揭示隐性关联和跨域数据逻辑，支撑智能检索、影响分析和合规管控，从而释放数据深层价值。
-                                    </div>
-                                    <div class="card-btn">
-                                        <el-button
-                                            class="home-btn"
-                                            round
-                                            @click="goTo('https://github.com/asiainfo/ODLM-Ontology/blob/main/README.md')">
-                                            查看OWL
-                                        </el-button>
-                                        <el-button
-                                            class="home-btn"
-                                            round
-                                            @click="goTo('https://github.com/asiainfo/ODLM-Ontology/issues')">
-                                            新建问题
-                                        </el-button>
-                                    </div>
-                                </div>
-                            </div>
                             <div
                                 class="card">
                                 <img src="./imgs/resource-icon-2.png"/>
@@ -157,6 +306,37 @@
                                             class="home-btn"
                                             round
                                             @click="goTo('https://github.com/asiainfo/AN-Ontology/issues')">
+                                            新建问题
+                                        </el-button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div
+                                class="card">
+                                <img src="./imgs/resource-icon-1.png"/>
+                                <div
+                                    class="card-content">
+                                    <div class="card-label">
+                                        数据治理本体
+                                    </div>
+                                    <div class="card-name">
+                                        Ontology for Data Lake Management
+                                    </div>
+                                    <div class="card-descr">
+                                        数据治理本体（Ontology for Data Lake Management，ODLM）是一种基于本体论的标准化语义模型，专为数据湖提供端到端数据治理框架。它系统化定义数据血缘、元数据、数据质量、数据标准、数据指标、安全合规等核心要素，不仅统一管理元数据，同时支持AI深度理解数据上下文。通过融合底层血缘与业务语义，自动揭示隐性关联和跨域数据逻辑，支撑智能检索、影响分析和合规管控，从而释放数据深层价值。
+                                    </div>
+                                    <div class="card-btn">
+                                        <el-button
+                                            class="home-btn"
+                                            round
+                                            @click="goTo('https://github.com/asiainfo/ODLM-Ontology/blob/main/README.md')">
+                                            查看OWL
+                                        </el-button>
+                                        <el-button
+                                            class="home-btn"
+                                            round
+                                            @click="goTo('https://github.com/asiainfo/ODLM-Ontology/issues')">
                                             新建问题
                                         </el-button>
                                     </div>
@@ -306,7 +486,7 @@
                             <div
                                 class="card">
                                 <img src="./imgs/香港理工.png"/>
-                            </div>              
+                            </div>  
                            
                         </div>
                     </div>
@@ -317,8 +497,9 @@
                         <div
                             class="link">
                             <div class="pos-left">
-                                <img src="./imgs/asiainfo-logo-white.png"/>
-                            </div>
+                                <img src=""/>
+                            </div> 
+                        
                             <div class="pos-right">
                                 <div
                                     class="el-link"
@@ -327,7 +508,7 @@
                                 </div>
                                 <div
                                     class="el-link"
-                                    @Click="goToSection('resource')">
+                                    @Click="goTo('https://github.com/asiainfo/ODLM-Ontology/issues')">
                                     联系我们
                                 </div>
                             </div>
@@ -396,8 +577,4 @@
         app.mount('#app');
     </script>
 </body>
-
 </html>
-
-
-

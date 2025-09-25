@@ -86,7 +86,8 @@ p {
     flex:  1;
 }
 .header .content .pos-left img {
-    height: 34px;
+    height: 40px;
+    margin-top: -3px;
 }
 .header .content .pos-right {
     display: flex;
@@ -560,8 +561,4 @@ button.home-btn.is-round {
 .content {
     width: 1080px;
     margin: 0px auto;
-}
-
-.header .content .pos-left img {
-    margin-left: -100px;
 }
